@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .button1 {
-            background-color: blue;
-            color: white;
-            border-radius: 10px;
-            border: 2px solid lightskyblue;
-            padding: 4px;
-        }
-        .button2 {
-            background-color: orangered;
-            color: white;
-            border-radius: 10px;
-            border: 2px solid lightcoral;
-            padding: 4px;
-        }
-
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Counter</title>
 </head>
+
 <body>
-    <h1>Counter</h1>
-        <h2>5</h2>
+    <!--Added content in container for easy styling/alignment in code-->
 
-<button class="button1">Click</button>   <button class="button2">Reset</button>
-
+    <div align="center" class="container">
+        <!--div Start-->
+        <h1>Counter</h1>
+        <hr>
+        <!--line break-->
+        <h2>Refresh the Page to See ({{count}}) Views</h2>
+        <!-- Form added to impact +2 button functionality to increase views by 2 on click -->
+        <form action="/count" method="POST">
+            <!--Form Start-->
+            <button type="submit" class="btn-outline-dark btn-info m-5 shadow" name="change" value="add">+2
+                Views</button>
+            <!--colorized buttons, added shadow + outline-->
+            <button type="submit" class="btn-outline-dark btn-warning m-5 shadow" name="change" value="reset">Reset
+                Views</button>
+            <!--colorized buttons, added shadow + outline-->
+        </form>
+        <!--Form End-->
+    </div>
+    <!--div End-->
 </body>
+
 </html>
