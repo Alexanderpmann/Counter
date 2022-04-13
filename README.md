@@ -1,2 +1,2 @@
 # Counter
-python - flask - counter - assignment - wip
+python - flask - counter - assignment - Coding Dojo - Completed Assignment
